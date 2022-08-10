@@ -1,0 +1,64 @@
+.container {
+  text-align: center;
+  align-items: center;
+}
+body {
+  background-image: url(../assignment3/cart.jpg);
+  background-size: cover;
+  color: rgb(2, 124, 18);
+
+  font-size: 15px;
+}
+.tittle {
+  color: rgb(2, 141, 2);
+}
+h1 {
+  font-size: 40px;
+}
+.header {
+  background-color: rgb(44, 44, 44);
+  width: 100%;
+  font-style: cursive;
+  font-family: cursive;
+  align-items: center;
+  text-align: center;
+}
+body {
+  font-family: sans-serif;
+  background-color: rgb(15, 15, 15);
+}
+.section {
+  align-items: center;
+  text-align: center;
+  padding-top: 2%;
+  padding-top: 5%;
+  background-image: url(../Assignment4/img/back.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.menu_list {
+  list-style-type: none;
+  color: white;
+}
+.menu_items {
+  display: inline-block;
+
+  font-weight: 500;
+  margin: 10px;
+}
+.search {
+  padding-bottom: 1%;
+}
+.bi {
+  color: green;
+}
+.card {
+  box-shadow: 0 3px 10px rgba(184, 181, 181, 0.2);
+}
+.card1 {
+  margin: 2px;
+}
+.bi1 {
+  font-size: 20px;
+  color: white;
+}
