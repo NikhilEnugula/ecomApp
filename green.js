@@ -44,7 +44,7 @@ app.controller("myCtrl", function ($scope) {
     {
       id: 6,
       section: "flower|plants",
-      name: "Chalisa Crossandra,kanakambaram",
+      name: "kanakambaram",
       desc: "Flower plant It can grow indoor and outdoor",
       image: "../ecomApp/img/Crossandra.jpg",
       price: "129",
