@@ -44,7 +44,7 @@ app.controller("myCtrl", function ($scope) {
     {
       id: 6,
       section: "flower|plants",
-      name: "Chalisa Crossandra,kanakambaram",
+      name: "kanakambaram",
       desc: "Flower plant It can grow indoor and outdoor",
       image: "../ecomApp/img/Crossandra.jpg",
       price: "129",
@@ -153,14 +153,7 @@ app.controller("myCtrl", function ($scope) {
       image: "../ecomApp/img/sillopink.png",
       price: "449",
     },
-    {
-      id: 20,
-      section: "decorative|plants",
-      name: "thulasi/Stevia",
-      desc: "Stevia rebaudiana is a plant species in the genus stevia of the family Asteraceae",
-      image: "../ecomApp/img/stevia.jpg",
-      price: "229",
-    },
+
     {
       id: 21,
       section: "decorative|plants",
