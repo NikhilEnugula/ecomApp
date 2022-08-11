@@ -153,14 +153,7 @@ app.controller("myCtrl", function ($scope) {
       image: "../ecomApp/img/sillopink.png",
       price: "449",
     },
-    {
-      id: 20,
-      section: "decorative|plants",
-      name: "thulasi/Stevia",
-      desc: "Stevia rebaudiana is a plant species in the genus stevia of the family Asteraceae",
-      image: "../ecomApp/img/stevia.jpg",
-      price: "229",
-    },
+
     {
       id: 21,
       section: "decorative|plants",
