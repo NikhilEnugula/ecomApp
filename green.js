@@ -165,21 +165,10 @@ app.controller("myCtrl", function ($scope) {
   ];
   $scope.cart = [];
   $scope.message = "";
+
   $scope.isShown = false;
   $scope.show = function (ite) {
     $scope.isShown = $scope.isVisible ? false : true;
-  };
-  $scope.store = function (item) {
-    if (item) {
-      $scope.cart.push({
-        section: item.section,
-        name: item.name,
-        desc: item.desc,
-        quntity: item.quntity,
-        price: item.price,
-      });
-    }
-    $scope.len = $scope.cart.length;
   };
 
   $scope.move = function (item) {
@@ -190,12 +179,12 @@ app.controller("myCtrl", function ($scope) {
         price: item.price,
         image: item.image,
       });
-      $scope.plants.splice($scope.buyItems.indexOf(item), 1);
+
+      $scope.len = $scope.len + 1;
     }
   };
 
   $scope.fil = { $: undefined };
-
   $scope.offData = false;
 
   $scope.flower = function () {
@@ -209,7 +198,7 @@ app.controller("myCtrl", function ($scope) {
   $scope.setFilter = function () {
     if ($scope.plants != "") {
       $scope.offData = true;
-      $scope.fil = $scope.plants;
+      $scope.fil = $scope.searchText;
     } else {
       $scope.offData = false;
     }
@@ -232,6 +221,7 @@ app.controller("myCtrl", function ($scope) {
   $scope.removeItem = function (item) {
     var index = $scope.cart.indexOf(item);
     $scope.cart.splice(index, 1);
+    $scope.len = $scope.len - 1;
   };
   $scope.fav = function (event) {
     event.currentTarget.style.color =
@@ -259,6 +249,7 @@ app.controller("myCtrl", function ($scope) {
 
   $scope.openCartItems = function () {
     $scope.cartdis = true;
+    $scope.logPage = false;
   };
 
   $scope.backToCart = function () {

@@ -51,7 +51,7 @@
       }
       body {
         font-family: sans-serif;
-        background-color: rgb(15, 15, 15);
+        background-color: rgb(88, 87, 87);
       }
       .section {
         align-items: center;
@@ -82,13 +82,18 @@
         color: green;
       }
       .card{
-        box-shadow: 0 3px 10px rgba(184, 181, 181, 0.2);
+        
         padding: 1;
 
       }
       .card1{
-      margin: 2px;
-      padding: 2%;
+      margin: 30px;
+      padding: 10px;
+    
+      box-shadow: 0 3px 10px rgba(184, 181, 181, 0.2);
+      background-color: rgb(223, 228, 233);
+      width: 300px;
+      height: 350px;
       
       }
       .bi1{
@@ -151,7 +156,7 @@
           padding-top: 0%;
         }
         .flobtn{
-          padding:2%;
+          padding:0;
         }
       .contact{
         position: absolute;
@@ -173,6 +178,9 @@
         background-color: #b6f1c5;
         color: antiquewhite;
       }
+      .cart_show{
+        margin-left: 20px;
+      }
     </style>
   </head>
   <body ng-app="myApp" ng-controller="myCtrl">
@@ -187,7 +195,7 @@
                           <li class="menu_items">About <i class="bi bi-file-person"></i></li> 
                           <li class="menu_items"> <a href="#" ng-click="openCont()"> Contact <i class="bi bi-person-lines-fill"></i></a></li> 
                           <li class="menu_items"><a href="#" ng-click="openLog()" >LogIn<i class="bi bi-door-open"></a></i></li>
-                          <li class="menu_items"> <a href="#" ng-click="openNikilP()"  >Cart <i class="bi bi-cart3"  type="button" ></i><span class="count" ng-model="" >{{len}}</span></a></li>
+                          <li class="menu_items"> <a href="#" ng-click="openNikilP()"  >Cart <i class="bi bi-cart3"  type="button" ></i><span class="count" ng-init="len = 0" >{{len}}</span></a></li>
                          
                         </ul>
                  </div>
@@ -196,9 +204,9 @@
        </div>
        <div>
           <div class="search">
-             <input type="text" ng-model="searchText" placeholder="Search Here..." />
+             <input type="text" ng-change="setFilter()" ng-model="searchText" placeholder="Search Here..." />
              <button class="btn btn-primary" ng-click="show()">
-               <span> <i class="bi bi-search" style="color: white;"></i></span>
+              Narrow it Down For Me
              </button>
            
           </div>
@@ -215,7 +223,7 @@
                       </div>
                             <div class="col-md-4" class="animate-repeat" ng-repeat="item in plants |filter:fil  "  >
                              
-                                 <div>
+                                 <div class="cart_show">
                                      <div class="card card1">
                                            <img ng-src="{{item.image}}" alt="Plant image" />
                                            <div class="card-body">
